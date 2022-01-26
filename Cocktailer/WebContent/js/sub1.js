@@ -76,11 +76,6 @@ $(document).ready(function() {
 		console.log(targetClass);
 	});
 
-	/*
-	 * $("#searchBtn").click(function() { if
-	 * ($(".itemShow").attr("display")=="none") alert("찾을 조건을 선택해주세요."); else
-	 * $(".itemShow").fadeIn(); });
-	 */
 
 	// 라디오-체크박스 적용 (inline-block처럼 서로의 특징 혼합)
 	$("#noseBtn").click(function() {
@@ -138,7 +133,7 @@ $(document).ready(function() {
 		}, 30, "swing");
 	});
 
-	// .itemShow 좌우 스크롤
+	// 우측 서브메뉴 좌우 스크롤
 	$(".toLeft").click(function() {
 		$(".itemShow").animate({
 			scrollLeft : "-=90"
