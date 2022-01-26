@@ -129,7 +129,7 @@ footer {
 	div.banner {
 		height: 580px;
 		width: 100%;
-		background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
+		background: url(../imgs/ourRumsTitleBoxImg.jpg) no-repeat center;
 		background-size: cover;
 		position: relative;
 	}
@@ -520,7 +520,7 @@ footer {
 	.banner {
 		height: 580px;
 		width: 100%;
-		background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
+		background: url(../imgs/ourRumsTitleBoxImg.jpg) no-repeat center;
 		background-size: cover;
 		position: relative;
 	}
@@ -909,7 +909,7 @@ footer {
 		position: relative;
 		height: 580px;
 		width: 100%;
-		background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
+		background: url(../imgs/ourRumsTitleBoxImg.jpg) no-repeat center;
 		background-size: cover;
 	}
 	.banner::before {
@@ -1294,7 +1294,7 @@ footer {
 	.banner {
 		height: 610px;
 		width: 100%;
-		background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
+		background: url(../imgs/ourRumsTitleBoxImg.jpg) no-repeat center;
 		background-size: cover;
 		position: relative;
 	}
