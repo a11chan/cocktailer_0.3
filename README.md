@@ -3,7 +3,7 @@
 ![siteLayoutImg](https://user-images.githubusercontent.com/85478918/151158178-5acbafdd-9165-4595-b6fd-41322eb7631a.png)
 
 
-* Demo: https://allchan-cocktailer.herokuapp.com/
+* Demo: https://cocktailer-allchan.herokuapp.com/
 
 
 #### 개발 목표
