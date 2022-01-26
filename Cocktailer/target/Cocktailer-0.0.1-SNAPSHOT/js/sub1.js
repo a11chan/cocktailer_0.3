@@ -73,7 +73,6 @@ $(document).ready(function() {
 			alert("찾을 조건을 선택해주세요.");
 			return false;
 		} else $(".itemShow").fadeToggle();
-		console.log(targetClass);
 	});
 
 
