@@ -1,5 +1,5 @@
 # COCKTAILER
-### 럼 소개 및 칵테일 관련 체험행사 예약 사이트
+### 럼 소개 및 칵테일 관련 체험행사 예약 사이트  
 ![siteLayoutImg](https://user-images.githubusercontent.com/85478918/151158178-5acbafdd-9165-4595-b6fd-41322eb7631a.png)
 
 
@@ -22,7 +22,7 @@
 
 
 #### 주요 기능
-* jQuery를 활용한 Taste Filter 구현
+* jQuery를 활용한 Taste Filter 구현  
 ![advan1](https://user-images.githubusercontent.com/85478918/151160109-aa6536a9-9d6a-4235-a07a-0b956d0f91e2.png)
 ~~~javascript
 let targetClass;
@@ -48,7 +48,7 @@ let targetClass;
 
   
 
-* Bootstrap을 활용한 입력폼 구현
+* Bootstrap을 활용한 입력폼 구현  
 ![advan2](https://user-images.githubusercontent.com/85478918/151161045-5fae9f56-f859-459c-b88f-672469350c39.png)
 ~~~html
 <form class="app-form" method="post" action="/board/postProc.jsp">
@@ -80,7 +80,7 @@ let targetClass;
 
 
 
-* JSP를 활용한 예약 관리 게시판 구현
+* JSP를 활용한 예약 관리 게시판 구현  
 ![advan3](https://user-images.githubusercontent.com/85478918/151161713-fd04b11f-c75c-420b-9d86-21c1bf03f240.png)
 ~~~jsp
 <table class="table table-striped table-hover text-center">
