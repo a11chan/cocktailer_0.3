@@ -117,3 +117,39 @@ let targetClass;
     <%
     } // 게시물 컬럼 출력 끝
 ~~~
+
+
+* 예약 처리를 위한 관리자모드 구현  
+![adminImg](https://user-images.githubusercontent.com/85478918/151281112-59f62a3c-152e-4a1a-b268-73d83c78b33c.png)  
+![admin2](https://user-images.githubusercontent.com/85478918/151281134-cc06ca75-54e0-4c63-97c9-a0b23cf189bb.png)  
+~~~jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="cocktail.board.MemberBean"%>
+<%
+request.setCharacterEncoding("utf-8");
+%>
+
+<jsp:useBean id="bMgr" class="cocktail.board.BoardMgr"/>
+<jsp:useBean id="bean" class="cocktail.board.BoardBean" scope="session"/><!-- 수정전 게시물 -->
+<jsp:useBean id="upBean" class="cocktail.board.BoardBean"/>
+<jsp:setProperty name="upBean" property="*"/>
+
+<%
+	MemberBean memBean = bMgr.getPass();
+	String nowPage = request.getParameter("nowPage");
+	String outPass = upBean.getPass( );//입력 비밀번호
+	String inPass = memBean.getPass( );//초기 비밀번호
+	if(outPass.equals(inPass)) {
+		bMgr.updateState(upBean); //게시물 수정처리(DB에 등록)
+		String url = "read.jsp?nowPage="+nowPage+"&num="+upBean.getNum( );
+		response.sendRedirect(url);
+	} else {
+%>
+	<script>
+		alert("입력하신 비밀번호는 유효하지 않습니다.");
+		history.back( );
+	</script>
+<%
+	}
+%>
+~~~
