@@ -81,6 +81,7 @@ let targetClass;
 
 
 * JSP를 활용한 예약 관리 게시판 구현  
+* 관리자 비밀번호(P@ssW0rd) 입력 시 조회/수정/삭제 가능
 ![advan3](https://user-images.githubusercontent.com/85478918/151161713-fd04b11f-c75c-420b-9d86-21c1bf03f240.png)
 ~~~jsp
 <table class="table table-striped table-hover text-center">
