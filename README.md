@@ -21,7 +21,7 @@
 * Maven
 
 
-#### Advanced Feature
+#### 주요 기능
 * jQuery를 활용한 Taste Filter 구현
 ![advan1](https://user-images.githubusercontent.com/85478918/151160109-aa6536a9-9d6a-4235-a07a-0b956d0f91e2.png)
 ~~~javascript
