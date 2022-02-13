@@ -1,10 +1,13 @@
-$(document).ready(function() {
+$(function() {
+	// navBar 메뉴 트리거
 	$("#trigger").click(function(e) {
 		e.preventDefault();
 		$(this).toggleClass("active");
 		$("#mainmenu").toggleClass("active");
 	});
-
+	
+	
+	// Taste 선택 효과 및 결과 표시 메서드
 	let tasteName = $(".submenu input");
 	let pickedItem = $(".itemShow > .itemBox");
 	let pickedTasteName = $(".pickedBox > div > label");
@@ -31,8 +34,7 @@ $(document).ready(function() {
 			targetValue.push("." + $(this).val());
 		});
 		pickedItemClass = targetValue.join(", ");
-
-		$(pickedItemClass).fadeIn(); // 선택된 클래스 전부 표시(문서전체)
+		$(pickedItemClass).fadeIn();
 
 		if (pickedItemClass.match(".n_")) {
 			noseChevron.fadeIn()
@@ -65,6 +67,7 @@ $(document).ready(function() {
 
 	});
 
+	
 	// 검색 결과 출력 토글
 	$(".itemShow").hide();
 	$("#searchBtn").click(function() {
@@ -75,7 +78,7 @@ $(document).ready(function() {
 	});
 
 
-	// 라디오-체크박스 적용
+	// Taste Filter 라디오버튼 효과 적용
 	$("#noseBtn").click(function() {
 		$('input[name="taste"]').not("#noseBtn").prop("checked", false);
 	});
@@ -89,7 +92,8 @@ $(document).ready(function() {
 		$('input[name="taste"]').not("#typeBtn").prop("checked", false);
 	});
 
-	// .pickedBox 좌우 스크롤
+	
+	// 선택된 Taste 이름 좌우 스크롤
 	$(".toLeft1").click(function() {
 		$("div.box1 > div.pickedNose").animate({
 			scrollLeft : "-=100"
@@ -128,18 +132,6 @@ $(document).ready(function() {
 	$(".toRight4").click(function() {
 		$("div.box4 > div.pickedType").animate({
 			scrollLeft : "+=100"
-		}, 30, "swing");
-	});
-
-	// 우측 서브메뉴 좌우 스크롤
-	$(".toLeft").click(function() {
-		$(".itemShow").animate({
-			scrollLeft : "-=90"
-		}, 30, "swing");
-	});
-	$(".toRight").click(function() {
-		$(".itemShow").animate({
-			scrollLeft : "+=90"
 		}, 30, "swing");
 	});
 
