@@ -5,78 +5,77 @@ $(document).ready(function() {
 		$("#mainmenu").toggleClass("active");
 	});
 
-	let tasteFilter = $(".submenu input");
-	let targetList = $(".itemShow > .itemBox");
-	let targetList2 = $(".pickedBox > div > label");
-	let chevronAll = $(".chevron");
-	let chevron1 = $(".pickedBox > .toLeft1, .pickedBox > .toRight1");
-	let chevron2 = $(".pickedBox > .toLeft2, .pickedBox > .toRight2");
-	let chevron3 = $(".pickedBox > .toLeft3, .pickedBox > .toRight3");
-	let chevron4 = $(".pickedBox > .toLeft4, .pickedBox > .toRight4");
-
-	let targetClass;
+	let tasteName = $(".submenu input");
+	let pickedItem = $(".itemShow > .itemBox");
+	let pickedTasteName = $(".pickedBox > div > label");
 	
-	chevronAll.hide();
-	targetList.hide();
-	targetList2.hide();
+	let allChevron = $(".chevron");
+	let noseChevron = $(".pickedBox > .toLeft1, .pickedBox > .toRight1");
+	let palateChevron = $(".pickedBox > .toLeft2, .pickedBox > .toRight2");
+	let finishChevron = $(".pickedBox > .toLeft3, .pickedBox > .toRight3");
+	let typeChevron = $(".pickedBox > .toLeft4, .pickedBox > .toRight4");
 
-	tasteFilter.click(function() {
-		chevronAll.hide();
-		targetList.hide();
-		targetList2.hide();
+	let pickedItemClass;
+	
+	pickedItem.hide();
+	pickedTasteName.hide();
+	allChevron.hide();
+
+	tasteName.click(function() {
+		allChevron.hide();
+		pickedItem.hide();
+		pickedTasteName.hide();
 
 		let targetValue = [];
-		tasteFilter.filter(":checked").each(function() {
+		tasteName.filter(":checked").each(function() {
 			targetValue.push("." + $(this).val());
 		});
-		targetClass = targetValue.join(", ");
+		pickedItemClass = targetValue.join(", ");
 
-		$(targetClass).fadeIn(); // 선택된 클래스 전부 표시(문서전체)
+		$(pickedItemClass).fadeIn(); // 선택된 클래스 전부 표시(문서전체)
 
-		if (targetClass.match(".n_")) {
-			chevron1.fadeIn()
+		if (pickedItemClass.match(".n_")) {
+			noseChevron.fadeIn()
 		} else {
-			chevron1.hide();
+			noseChevron.hide();
 		}
 
-		if (targetClass.match(".p_")) {
-			chevron2.fadeIn()
+		if (pickedItemClass.match(".p_")) {
+			palateChevron.fadeIn()
 		} else {
-			chevron2.hide();
+			palateChevron.hide();
 		}
 
-		if (targetClass.match(".f_")) {
-			chevron3.fadeIn()
+		if (pickedItemClass.match(".f_")) {
+			finishChevron.fadeIn()
 		} else {
-			chevron3.hide();
+			finishChevron.hide();
 		}
 
-		if (targetClass.match(".t_")) {
-			chevron4.fadeIn()
+		if (pickedItemClass.match(".t_")) {
+			typeChevron.fadeIn()
 		} else {
-			chevron4.hide();
+			typeChevron.hide();
 		}
 
-		if (targetClass == "") {
-			chevronAll.fadeOut();
+		if (pickedItemClass == "") {
+			allChevron.fadeOut();
 			$(".itemShow").fadeOut();
 		}
 
-		// 함수 검증용 코드
-		// console.log(targetClass);
 	});
 
 	// 검색 결과 출력 토글
 	$(".itemShow").hide();
 	$("#searchBtn").click(function() {
-		if (!targetClass) {
+		if (!pickedItemClass) {
 			alert("찾을 조건을 선택해주세요.");
 			return false;
 		} else $(".itemShow").fadeToggle();
 	});
 
 
-	// 라디오-체크박스 적용 (inline-block처럼 서로의 특징 혼합)
+	// 라디오-체크박스 적용
 	$("#noseBtn").click(function() {
 		$('input[name="taste"]').not("#noseBtn").prop("checked", false);
 	});
@@ -144,4 +143,4 @@ $(document).ready(function() {
 		}, 30, "swing");
 	});
 
-}); // end of script
+});
