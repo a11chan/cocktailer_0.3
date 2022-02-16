@@ -5,7 +5,7 @@
 
 <jsp:useBean id="bMgr" class="cocktail.board.BoardMgr" />
 
-<% /* 변수설정 */
+<%
 request.setCharacterEncoding("utf-8");
 
 int totalRecord = 0; // 전체 게시물 수
@@ -24,13 +24,6 @@ Vector<BoardBean> vlist = null;
 if (request.getParameter("keyWord") != null) {
 	keyWord = request.getParameter("keyWord");
 	keyField = request.getParameter("keyField");
-}
-
-if (request.getParameter("reload") != null) {
-	if (request.getParameter("reload").equals("true")) {
-		keyWord = "";
-		keyField = "";
-	}
 }
 
 if (request.getParameter("nowPage") != null) {
@@ -69,28 +62,23 @@ totalBlock = (int) Math.ceil((double) totalPage / pagePerBlock); // 전체블럭
 <script src="../js/list.js"></script>
 
 <script>
-	function list() { // 게시물 목록 출력
-		document.listFrm.action = "list.jsp";
-		document.listFrm.submit();
-	}
-
-	function pageing(page) { // 사용자가 클릭한 페이지 블럭 게시물 목록 출력
+	function paging(page) { // 사용자가 클릭한 페이지 블럭 게시물 목록 출력
 		document.readFrm.nowPage.value = page;
 		document.readFrm.submit();
 	}
-
+	
 	function block(value) { // 블럭 페이지 이동 함수
 		document.readFrm.nowPage.value = <%=pagePerBlock%>
 	* (value - 1) + 1;
 		document.readFrm.submit();
 	}
-
+	
 	function read(num) { // num에 해당하는 페이지 출력
 		document.readFrm.num.value = num;
 		document.readFrm.action = "readPass.jsp";
 		document.readFrm.submit();
 	}
-
+	
 	function check() { // 검색함수
 		if (document.searchFrm.keyWord.value == "") {
 			alert("검색어를 입력하세요.");
@@ -112,7 +100,8 @@ totalBlock = (int) Math.ceil((double) totalPage / pagePerBlock); // 전체블럭
 		</h4>
 
 		<p>
-			<span class="badge bg-secondary">Total : <%=totalRecord%>행(현재페이지:<%=nowPage%>/전체페이지:<%=totalPage%>)
+			<span class="badge bg-secondary">
+				Total : <%=totalRecord%>행(현재페이지:<%=nowPage%>/전체페이지:<%=totalPage%>)
 			</span>
 		</p>
 		<%
@@ -179,7 +168,7 @@ totalBlock = (int) Math.ceil((double) totalPage / pagePerBlock); // 전체블럭
 				<% for (; pageStart < pageEnd; pageStart++) { %>
 				<button type="button" class="btn btn-outline-secondary
 					<% if (pageStart==nowPage) { %>active<% } %>"
-					onClick="javascript:pageing('<%=pageStart%>')" >
+					onClick="javascript:paging('<%=pageStart%>')" >
 						<%=pageStart%>
 				</button>
 				<% } %>
@@ -204,7 +193,7 @@ totalBlock = (int) Math.ceil((double) totalPage / pagePerBlock); // 전체블럭
 		<form name="searchFrm" method="post" action="list.jsp" class="searchFrm ">
 			<div class="input-group">
 				<select name="keyField" class="form-select w-auto">
-					<option selected>검색방법</option>
+					<option selected disabled>검색방법</option>
 					<option value="event">참여형태</option>
 					<option value="name">신청인</option>
 					<option value="vDate">방문일</option>
@@ -217,10 +206,6 @@ totalBlock = (int) Math.ceil((double) totalPage / pagePerBlock); // 전체블럭
 			<input type="hidden" name="nowPage" value="1">
 		</form>
 		
-		<form name="listFrm" method="post">
-			<input type="hidden" name="reload" value="true">
-			<input type="hidden" name="nowPage" value="1">
-		</form>
 		<form name="readFrm" method="post">
 			<input type="hidden" name="num">
 			<input type="hidden" name="nowPage" value="<%=nowPage%>">

@@ -56,7 +56,7 @@
 	function check( ) {
 		if (document.passFrm.pass.value == "") {
 			alert("비밀번호를 입력하세요.");
-			document.PassFrm.pass.focus( );
+			document.passFrm.pass.focus( );
 			return false;
 		}
 		document.passFrm.submit( );

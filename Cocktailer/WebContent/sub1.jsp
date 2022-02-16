@@ -90,7 +90,7 @@
 							<label for="p_banana">banana</label>
 
 							<input type="checkbox" id="p_chocolate" name="pick_info"
-								value="p_chocolatea" />
+								value="p_chocolate" />
 							<label for="p_chocolate">chocolate</label>
 
 							<input type="checkbox" id="p_clove" name="pick_info"
@@ -273,7 +273,7 @@
 						<div class="pickedBox box2">
 							<div class="pickedPalate">
 								<label for="p_banana" class="p_banana">banana</label>
-								<label for="p_chocolate" class="p_chocolatea">chocolate</label>
+								<label for="p_chocolate" class="p_chocolate">chocolate</label>
 								<label for="p_clove" class="p_clove">clove</label>
 								<label for="p_creamy" class="p_creamy">creamy</label>
 								<label for="p_dark-honey" class="p_dark-honey">dark-honey</label>
@@ -320,7 +320,8 @@
 							<div class="shading s-right-floor3"></div>
 							<div class="chevron Lchevron toLeft3"></div>
 							<div class="chevron Rchevron toRight3"></div>
-						</div></div>
+						</div>
+					</div>
 					<div>
 						<input type="checkbox" id="type2Btn" />
 						<label for="type2Btn">type</label>
@@ -348,7 +349,7 @@
 	
 	<div class="clear"></div>
 	
-	<div class="itemShow">
+	<div class="itemShowcase">
 		<div
 			class="itemBox n_almonds n_fruit p_smooth p_creamy f_dry f_clean t_white">
 			<img class="itemImg" src="./imgs/filterItem/1CARTA_BLANCA.jpg"

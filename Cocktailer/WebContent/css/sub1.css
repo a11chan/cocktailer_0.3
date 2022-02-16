@@ -41,7 +41,7 @@ section span {
 }
 
 /* 럼 출력 슬라이더 모양 */
-.itemShow {
+.itemShowcase {
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
@@ -509,7 +509,7 @@ footer {
 		bottom: 20px;
 	}
 	
-	.itemShow {
+	.itemShowcase {
 		max-width:1420px;
 	}
 }
