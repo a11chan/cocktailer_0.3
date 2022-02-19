@@ -123,7 +123,7 @@ totalBlock = (int) Math.ceil((double) totalPage / pagePerBlock); // 전체블럭
 				</tr>
 			</thead>
 			<%
-			for (int i = 0; i < numPerPage; i++) { // numPerPage(페이지당 출력되는 게시물)
+			for (int i = 0; i < numPerPage; i++) { // 페이지당 출력되는 게시물
 				if (i == listSize)
 					break;
 				BoardBean bean = vlist.get(i);
@@ -144,7 +144,7 @@ totalBlock = (int) Math.ceil((double) totalPage / pagePerBlock); // 전체블럭
 					<td><%=state%></td>
 				</tr>
 			<%
-			} // 게시물 컬럼 출력 끝
+			}
 			%>
 		<%
 		 }//if (vlist.isEmpty()) else:END

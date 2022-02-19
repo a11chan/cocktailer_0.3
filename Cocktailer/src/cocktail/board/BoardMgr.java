@@ -36,7 +36,7 @@ public class BoardMgr {
 				sql += "order by ref desc limit ? , ?";
 				pstmt = con.prepareStatement(sql);
 				pstmt.setString(1, "%" + keyWord + "%"); 
-				pstmt.setInt(2, start);
+				pstmt.setInt(2, start); // 0부터 시작
 				pstmt.setInt(3, end);
 			}
 			rs = pstmt.executeQuery( );
