@@ -124,3 +124,7 @@ $(function() {
 	$.fn.ToggleSearchBtn();
 	
 });
+
+function readyAlert( ) {
+	alert("서비스 준비중입니다.");
+}

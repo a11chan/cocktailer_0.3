@@ -15,7 +15,7 @@
 				태양이 스며든 듯한 <span>럼</span>을
 			</h3>
 			<h3 class="h3_sm">원하는 스타일로 즐기기</h3>
-			<p>기억에 남는 칵테일이 있으신가요? 무슨 럼인지 향기와 맛을 더듬어 가면서 찾아보세요.</p>
+			<p>기억에 남는 칵테일이 있으신가요? 맛과 향을 더듬어 가면서 찾아보세요.</p>
 		</div>
 	</div>
 
@@ -357,7 +357,7 @@
 			<h5>carta blanca</h5>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dicta</p>
-			<a>for more details</a>
+			<a onClick="readyAlert()">for more details</a>
 		</div>
 		<div
 			class="itemBox n_vanilla n_cinnamon p_sweet p_spiced f_black-pepper f_fudge t_spiced">
@@ -366,7 +366,7 @@
 			<h5>spiced</h5>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dicta</p>
-			<a>for more details</a>
+			<a onClick="readyAlert()">for more details</a>
 		</div>
 		<div
 			class="itemBox n_nutty n_butter p_rich p_toasted f_dry f_sweet t_gold">
@@ -375,7 +375,7 @@
 			<h5>carta oro</h5>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dicta</p>
-			<a>for more details</a>
+			<a onClick="readyAlert()">for more details</a>
 		</div>
 		<div
 			class="itemBox n_toasted n_nutty p_tropical p_medium-bodied f_smoky f_molasses t_dark">
@@ -384,7 +384,7 @@
 			<h5>carta negra</h5>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dicta</p>
-			<a>for more details</a>
+			<a onClick="readyAlert()">for more details</a>
 		</div>
 		<div
 			class="itemBox n_vanilla n_cinnamon p_dark-honey p_clove f_toffee f_oak t_gold">
@@ -393,7 +393,7 @@
 			<h5>AÑEJO CUATRO</h5>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dicta</p>
-			<a>for more details</a>
+			<a onClick="readyAlert()">for more details</a>
 		</div>
 		<div
 			class="itemBox n_dried-apricot n_banana-leaf p_oak p_spiced f_expansive f_well-rounded t_dark">
@@ -402,7 +402,7 @@
 			<h5>RESERVA OCHO</h5>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dicta</p>
-			<a>for more details</a>
+			<a onClick="readyAlert()">for more details</a>
 		</div>
 		<div
 			class="itemBox n_almonds n_peach p_banana p_pear p_vanilla f_pineapple f_cinnamon t_dark-gold">
@@ -411,7 +411,7 @@
 			<h5>GRAN RESERVA DIEZ</h5>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dicta</p>
-			<a>for more details</a>
+			<a onClick="readyAlert()">for more details</a>
 		</div>
 		<div
 			class="itemBox n_almonds n_vanilla p_raisin p_chocolate f_oak f_raisin t_blended">
@@ -420,7 +420,7 @@
 			<h5>GRAN RESERVA LIMITADA</h5>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Dicta</p>
-			<a>for more details</a>
+			<a onClick="readyAlert()">for more details</a>
 		</div>
 	</div>
 	
