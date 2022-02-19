@@ -22,6 +22,7 @@
 * HTML
 * CSS
 * jQuery
+* Javascript
 * Bootstrap
 * MySQL
 * JSP
@@ -40,24 +41,27 @@
 * jQuery를 활용한 Taste Filter 구현  
 ![advan1](https://user-images.githubusercontent.com/85478918/151160109-aa6536a9-9d6a-4235-a07a-0b956d0f91e2.png)
 ~~~javascript
-let targetClass;
-	
-  chevronAll.hide();
-  targetList.hide();
-  targetList2.hide();
+let tasteName = $(".submenu input");
+tasteName.click(function(){
+    $.fn.makePickedItemSelector();
+    $.fn.hidePickedItemAndTasteName();
+    $(pickedItemSelector).show();
+    $.fn.showNoseChevron();
+    $.fn.showPalateChevron();
+    $.fn.showFinishChevron();
+    $.fn.showTypeChevron();
+    $.fn.clearForm();
+});
 
-  tasteFilter.click(function() {
-    chevronAll.hide();
-    targetList.hide();
-    targetList2.hide();
-
-    let targetValue = [];
-    tasteFilter.filter(":checked").each(function() {
-      targetValue.push("." + $(this).val());
+$.fn.applyRadioBtnEffect = function(){
+    this.click(function(){
+        $('input[name="taste"]').not(this).prop("checked", false);
     });
-    targetClass = targetValue.join(", ");
-
-    $(targetClass).fadeIn(); // 선택된 클래스 전부 표시(문서전체)
+};
+$("#noseBtn").applyRadioBtnEffect();
+$("#palateBtn").applyRadioBtnEffect();
+$("#finishBtn").applyRadioBtnEffect();
+$("#typeBtn").applyRadioBtnEffect();
 ~~~
 
 
@@ -110,7 +114,7 @@ let targetClass;
         </tr>
     </thead>
     <%
-    for (int i = 0; i < numPerPage; i++) { // numPerPage(페이지당 출력되는 게시물)
+    for (int i = 0; i < numPerPage; i++) { // 페이지당 출력되는 게시물
         if (i == listSize)
             break;
         BoardBean bean = vlist.get(i);
@@ -131,7 +135,8 @@ let targetClass;
             <td><%=state%></td>
         </tr>
     <%
-    } // 게시물 컬럼 출력 끝
+    }
+    %>
 ~~~
 
 
@@ -146,18 +151,17 @@ request.setCharacterEncoding("utf-8");
 %>
 
 <jsp:useBean id="bMgr" class="cocktail.board.BoardMgr"/>
-<jsp:useBean id="bean" class="cocktail.board.BoardBean" scope="session"/><!-- 수정전 게시물 -->
-<jsp:useBean id="upBean" class="cocktail.board.BoardBean"/>
-<jsp:setProperty name="upBean" property="*"/>
+<jsp:useBean id="updateBean" class="cocktail.board.BoardBean"/>
+<jsp:setProperty name="updateBean" property="*"/>
 
 <%
 	MemberBean memBean = bMgr.getPass();
 	String nowPage = request.getParameter("nowPage");
-	String outPass = upBean.getPass( );//입력 비밀번호
-	String inPass = memBean.getPass( );//초기 비밀번호
-	if(outPass.equals(inPass)) {
-		bMgr.updateState(upBean); //게시물 수정처리(DB에 등록)
-		String url = "read.jsp?nowPage="+nowPage+"&num="+upBean.getNum( );
+	String inputPassword = updateBean.getPass( );
+	String firstPassword = memBean.getPass( );
+	if(inputPassword.equals(firstPassword)) {
+		bMgr.updateState(updateBean); //게시물 수정처리(DB에 등록)
+		String url = "read.jsp?nowPage="+nowPage+"&num="+updateBean.getNum( );
 		response.sendRedirect(url);
 	} else {
 %>
@@ -172,6 +176,6 @@ request.setCharacterEncoding("utf-8");
 
 
 #### 향후 과제
-* 클린 코드 지침 적용
+* 중복 CSS 최적화
 * 이미지 파일 네이밍 규칙 수립
-* 코드 단순화 및 유지보수성 제고를 위한 스프링 프로젝트로의 전환
+* 스프링 프로젝트로의 전환
