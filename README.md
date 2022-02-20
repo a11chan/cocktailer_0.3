@@ -101,8 +101,9 @@ $("#typeBtn").applyRadioBtnEffect();
 
 * JSP를 활용한 예약 관리 게시판 구현  
 * 관리자 비밀번호(P@ssW0rd) 입력 시 조회/수정/삭제 가능
-![crud](https://user-images.githubusercontent.com/85478918/154830298-017f45eb-f7a2-4118-9a00-07615953e3cd.gif)
+![crud](https://user-images.githubusercontent.com/85478918/154832049-183a8cd5-b0cc-4f21-a2a9-60910f9e991a.gif)
 ~~~jsp
+
 <table class="table table-striped table-hover text-center">
     <thead>
         <tr>
@@ -141,8 +142,7 @@ $("#typeBtn").applyRadioBtnEffect();
 
 
 * 예약 처리를 위한 관리자모드 구현  
-![adminImg](https://user-images.githubusercontent.com/85478918/151281112-59f62a3c-152e-4a1a-b268-73d83c78b33c.png)  
-![admin2](https://user-images.githubusercontent.com/85478918/151281134-cc06ca75-54e0-4c63-97c9-a0b23cf189bb.png)  
+![admin](https://user-images.githubusercontent.com/85478918/154832033-676f5ca8-85a9-4bec-8e19-2ac3cc878b94.gif)
 ~~~jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="cocktail.board.MemberBean"%>
