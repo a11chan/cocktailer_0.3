@@ -57,7 +57,6 @@ totalBlock = (int) Math.ceil((double) totalPage / pagePerBlock); // 전체블럭
 <link rel="shortcut icon" href="../imgs/favicon.ico" />
 
 <script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/list.js"></script>
 
