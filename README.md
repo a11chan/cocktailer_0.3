@@ -3,7 +3,7 @@
 ![siteLayoutImg](https://user-images.githubusercontent.com/85478918/151158178-5acbafdd-9165-4595-b6fd-41322eb7631a.png)
 
 
-* Demo: https://cocktailer-allchan.herokuapp.com/  
+* Demo: https://cocktailer2.herokuapp.com/  
 (최초 접속 시 10~20초 소요)
 
 #### 개발 목표
