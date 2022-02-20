@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="cocktail.board.BoardBean"%>
 
-<% /* 변수설정 */
+<% 
 	int num = Integer.parseInt(request.getParameter("num"));
 	String nowPage = request.getParameter("nowPage");
 	BoardBean bean = (BoardBean)session.getAttribute("bean");
@@ -28,7 +28,6 @@
 <link rel="shortcut icon" href="../imgs/favicon.ico" />
 
 <script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/menu.js"></script>
 
@@ -41,7 +40,7 @@
 		<h4>
 			Administrator <span>Only</span>
 		</h4>
-		<form name="updateFrm" method="post" action="replyProc.jsp" onsubmit="return check()">
+		<form name="updateFrm" method="post" action="replyProc.jsp">
 			<div class="input-group mb-2">
 				<label class="input-group-text" for="eventSelect">처리내용</label>
 				<select class="form-select" id="eventSelect" name="state">

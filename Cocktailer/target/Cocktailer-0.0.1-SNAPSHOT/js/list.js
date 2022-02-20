@@ -22,4 +22,5 @@ $(document).ready(function() {
 			$(".btn-group").removeClass("btn-group-sm")
 		}
 	});
+	
 });

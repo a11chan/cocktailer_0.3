@@ -1,0 +1,6 @@
+cocktail\dbcp\DBConnectionMgr.class
+cocktail\test\DriverTest.class
+cocktail\board\BoardMgr.class
+cocktail\board\BoardBean.class
+cocktail\board\MemberBean.class
+cocktail\dbcp\ConnectionObject.class

@@ -19,11 +19,10 @@
 <link rel="shortcut icon" href="../imgs/favicon.ico" />
 
 <script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/menu.js"></script>
 
-<% /* 변수설정 및 비밀번호 처리로직 */
+<% 
 	request.setCharacterEncoding("utf-8");
 	String nowPage = request.getParameter("nowPage");
 	int num = Integer.parseInt(request.getParameter("num"));

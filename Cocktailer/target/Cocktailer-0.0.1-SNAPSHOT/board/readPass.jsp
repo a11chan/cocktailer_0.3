@@ -20,7 +20,6 @@
 <link rel="shortcut icon" href="../imgs/favicon.ico" />
 
 <script src="../js/bootstrap.bundle.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/menu.js"></script>
 
@@ -56,7 +55,7 @@
 	function check( ) {
 		if (document.passFrm.pass.value == "") {
 			alert("비밀번호를 입력하세요.");
-			document.PassFrm.pass.focus( );
+			document.passFrm.pass.focus( );
 			return false;
 		}
 		document.passFrm.submit( );

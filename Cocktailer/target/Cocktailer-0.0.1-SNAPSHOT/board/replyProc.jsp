@@ -5,18 +5,17 @@ request.setCharacterEncoding("utf-8");
 %>
 
 <jsp:useBean id="bMgr" class="cocktail.board.BoardMgr"/>
-<jsp:useBean id="bean" class="cocktail.board.BoardBean" scope="session"/><!-- 수정전 게시물 -->
-<jsp:useBean id="upBean" class="cocktail.board.BoardBean"/>
-<jsp:setProperty name="upBean" property="*"/>
+<jsp:useBean id="updateBean" class="cocktail.board.BoardBean"/>
+<jsp:setProperty name="updateBean" property="*"/>
 
 <%
 	MemberBean memBean = bMgr.getPass();
 	String nowPage = request.getParameter("nowPage");
-	String outPass = upBean.getPass( );//입력 비밀번호
-	String inPass = memBean.getPass( );//초기 비밀번호
-	if(outPass.equals(inPass)) {
-		bMgr.updateState(upBean); //게시물 수정처리(DB에 등록)
-		String url = "read.jsp?nowPage="+nowPage+"&num="+upBean.getNum( );
+	String inputPassword = updateBean.getPass( );
+	String firstPassword = memBean.getPass( );
+	if(inputPassword.equals(firstPassword)) {
+		bMgr.updateState(updateBean); //게시물 수정처리(DB에 등록)
+		String url = "read.jsp?nowPage="+nowPage+"&num="+updateBean.getNum( );
 		response.sendRedirect(url);
 	} else {
 %>

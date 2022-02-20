@@ -26,13 +26,14 @@
 			<h3>welcome</h3>
 			<div>
 				<p>
-					You have to be over <span>19</span> to enter this site.
+					대한민국에 거주하고 만 <span>19세</span> 이상인가요? 
 				</p>
-				<p>Please enter your date of birth.</p>
+				<p>출생년도를 입력해주세요.</p>
 			</div>
 			<form id="age_form" autocomplete="off">
-				<input id="age_text" type="text" placeholder="YYYY" maxlength="4"
-					required /> <input id="age_submit" type="submit" value="OK" />
+				<input id="age_text" placeholder="YYYY" maxlength="4"
+					required />
+				<input id="age_submit" type="submit" value="OK" />
 			</form>
 			<div id="age_check__alert"></div>
 			<h1 class="logo">
@@ -79,8 +80,7 @@
 							<h2>
 								태양이 스며든 듯한,<br />럼을 원하는 스타일로 즐기기
 							</h2>
-							<p>기억에 남는 칵테일이 있으신가요? 무슨 럼으로 만들었는지 궁금하시다면 향기와 맛을 더듬어 가면서
-								찾아보아요.</p>
+							<p>기억에 남는 칵테일이 있으신가요? 맛과 향을 더듬어 가면서 찾아보세요.</p>
 							<a href="sub1.jsp">our rums <span>more →</span></a>
 						</div>
 						<div class="smallbn">

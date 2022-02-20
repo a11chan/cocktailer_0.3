@@ -5,16 +5,16 @@ $(document).ready(function() {
 		$("#age_check").toggleClass("none");
 		$("#age_form").submit(function(e) {
 			var age = parseInt($("#age_text").val());
-			if (age < 0 || age == 0 || isNaN(age)) {
+			if (age < 0 || age == 0 || age < 1933 || isNaN(age)) {
 				e.preventDefault();
-				$("#age_check__alert").text("Please write real positive number");
+				$("#age_check__alert").text("올바른 출생년도를 입력해주세요.");
 			} else if (age > 2003) {
 				e.preventDefault();
-				$("#age_check__alert").text("You are too young!");
+				$("#age_check__alert").text("만 19세 이상의 성인만 이용할 수 있습니다.");
 			} else {
+				e.preventDefault();
 				localStorage.setItem("age", age);
 				$("#age_check").toggleClass("none");
-				e.preventDefault();
 			}
 		});
 	}
@@ -41,7 +41,6 @@ $(document).ready(function() {
 		$("div.numbox__bar__now").animate({ width: 0 }, 0, nowBar);
 	});
 
-	// 플렉스슬라이더 모바일 스와이프 시 텍스트 변경
 
 	// 플렉스슬라이더 버튼 클릭시 텍스트 변경
 	$("a.flex-prev, a.flex-next").click(function() {
