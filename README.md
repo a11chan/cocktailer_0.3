@@ -39,7 +39,7 @@
 
 #### 주요 기능
 * jQuery를 활용한 Taste Filter 구현  
-![advan1](https://user-images.githubusercontent.com/85478918/151160109-aa6536a9-9d6a-4235-a07a-0b956d0f91e2.png)
+![rumFilterPreview](https://user-images.githubusercontent.com/85478918/154827446-14fdfecf-bd54-488c-8d38-eda1e770a6f6.gif)
 ~~~javascript
 let tasteName = $(".submenu input");
 tasteName.click(function(){
@@ -68,7 +68,7 @@ $("#typeBtn").applyRadioBtnEffect();
   
 
 * Bootstrap을 활용한 입력폼 구현  
-![advan2](https://user-images.githubusercontent.com/85478918/151161045-5fae9f56-f859-459c-b88f-672469350c39.png)
+![apply](https://user-images.githubusercontent.com/85478918/154830287-cd4aded2-69ce-4981-91d0-0c96aa0f464e.gif)
 ~~~html
 <form class="app-form" method="post" action="/board/postProc.jsp">
 
@@ -101,7 +101,7 @@ $("#typeBtn").applyRadioBtnEffect();
 
 * JSP를 활용한 예약 관리 게시판 구현  
 * 관리자 비밀번호(P@ssW0rd) 입력 시 조회/수정/삭제 가능
-![advan3](https://user-images.githubusercontent.com/85478918/151161713-fd04b11f-c75c-420b-9d86-21c1bf03f240.png)
+![crud](https://user-images.githubusercontent.com/85478918/154830298-017f45eb-f7a2-4118-9a00-07615953e3cd.gif)
 ~~~jsp
 <table class="table table-striped table-hover text-center">
     <thead>
