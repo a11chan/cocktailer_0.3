@@ -143,29 +143,29 @@
 						</div>
 
 						<div class="inputSet1">
-							<div class="inputSet">
+							<div class="inputSet nickname mb-2">
 								<input type="text" name="name" placeholder="신청자 닉네임(한글 또는 영문)"
-									pattern="^[가-힣a-zA-Z]+$" required class="form-control mb-2" />
+									pattern="^[가-힣a-zA-Z]+$" required class="form-control" />
 							</div>
-							<div class="inputSet">
+							<div class="inputSet mb-2">
 								<input type="tel" name="tel" placeholder="연락처 입력" maxlength="13"
-									required class="form-control mb-2" />
+									required class="form-control" />
 							</div>
 						</div>
 						<div class="inputSet2">
-							<div class="inputSet">
+							<div class="inputSet party mb-2">
 								<input type="number" min="1" name="member"
-									placeholder="참여인원(신청자 포함)" required class="form-control mb-2" />
+									placeholder="참여인원(신청자 포함)" required class="form-control" />
 							</div>
-							<div class="inputSet">
+							<div class="inputSet mb-2">
 								<input type="date" name="vDate" data-placeholder="방문일 선택"
-									required class="form-control mb-2" />
+									required class="form-control" />
 							</div>
 						</div>
 						<div class="inputSet3">
-							<div class="inputSet">
+							<div class="inputSet mb-2">
 								<input type="password" name="pass" placeholder="신청서 수정용 비밀번호"
-									maxlength="8" required class="form-control mb-2" />
+									minlength="4" maxlength="8" required class="form-control" />
 							</div>
 						</div>
 
