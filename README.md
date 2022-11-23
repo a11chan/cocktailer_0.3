@@ -100,7 +100,7 @@ $("#typeBtn").applyRadioBtnEffect();
 
 
 * JSP를 활용한 예약 관리 게시판 구현  
-* 관리자 비밀번호(P@ssW0rd) 입력 시 조회/수정/삭제 가능
+* 관리자 비밀번호 입력 시 조회/수정/삭제 가능
 ![crud](https://user-images.githubusercontent.com/85478918/154832049-183a8cd5-b0cc-4f21-a2a9-60910f9e991a.gif)
 ~~~jsp
 
